@@ -54,16 +54,6 @@ export default function Banner() {
           <CarouselNext className="absolute right-2 top-1/2 transform -translate-y-1/2" />
         </Carousel>
       </div>
-      <div className="flex flex-col bg-gradient-to-r from-gray-300 from-10% via-gray-200 via-30% to-gray-100 to-90% p-6 md:p-16 w-full">
-        <div className="flex flex-col items-start w-full md:w-9/12 space-y-4">
-          <h2 className="text-2xl md:text-4xl font-bold text-left md:text-left">
-            Líderes en ahorro energético...
-          </h2>
-          <p className="text-lg md:text-xl text-gray-600 text-left md:text-left">
-            Diseñamos y brindamos soluciones integrales para el aire comprimido industrial.
-          </p>
-        </div>
-      </div>
     </section>
   );
 }

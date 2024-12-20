@@ -45,13 +45,8 @@ const Navbar = () => {
       {/* Segundo Navbar con el nuevo estilo */}
       <div className="relative flex flex-row z-50 w-full h-20 bg-white text-lg items-end justify-between px-4 shadow-md">
         <div className="flex items-center">
-          <img
-            className="h-12 w-12 object-cover"
-            src={logo}
-            alt="Logo"
-          />
           <p className="text-lg ml-2 font-semibold truncate w-32 sm:w-auto">
-            Bochor
+            Logo
           </p>
         </div>
         <div className="hidden sm:flex space-x-4">

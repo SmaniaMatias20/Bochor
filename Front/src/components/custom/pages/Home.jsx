@@ -15,10 +15,10 @@ import { Users, ClipboardList, Briefcase, Clock } from "lucide-react";
 export function Home() {
   return (
     <section className="flex flex-col items-center min-h-screen w-full bg-white p-0 md:p-0 lg:p-0">
-      <div className="h-full">
-        <Banner />
 
-      </div>
+      <Banner />
+
+
       <div className="flex flex-col sm:flex-row h-auto md:h-48 items-center justify-center space-y-6 sm:space-y-0 sm:space-x-16 p-6 h-full w-full">
         <div className="flex flex-col items-center font">
           <Users size={64} className="transition-transform duration-500 ease-in-out hover:rotate-[360deg]" />

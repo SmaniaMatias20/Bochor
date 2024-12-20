@@ -14,9 +14,9 @@ const AppContent = () => {
   return (
     <div>
       {/* Renderiza el Navbar solo si no estamos en la página de Login */}
-      {location.pathname !== "/" && <Navbar />}
+      <Navbar />
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
 
       </Routes>
     </div>

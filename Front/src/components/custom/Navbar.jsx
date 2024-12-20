@@ -6,9 +6,9 @@ import logo from "../../img/logoDefinitivo.webp";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMenu1Open, setIsMenu1Open] = useState(false);
+
   const [fieldsNav, setFieldsNav] = useState([
-    { name: "INICIO", path: "/Home" },
+    { name: "INICIO", path: "/" },
     { name: "NOSOTROS", path: "/About" },
     { name: "CONTACTO", path: "/Contact" },
 
@@ -20,14 +20,6 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const toggleMenu1 = () => {
-    setIsMenu1Open(!isMenu1Open);
-  };
-
-  // Modifica esta función para recibir un path
-  const handleNavigationFirstNavbar = (path) => {
-    navigate(path);
-  };
 
   const handleNavigationSecondNavbar = (path, index) => {
     navigate(path);
@@ -35,8 +27,7 @@ const Navbar = () => {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("user");
-    localStorage.removeItem("authToken");
+
     navigate("/");
   };
 

@@ -1,27 +1,56 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: [
-    './src/**/*.{js,jsx,ts,tsx}',  // Asegúrate de que estos archivos estén siendo analizados para purgar estilos no utilizados.
-    './public/index.html',          // Incluye también el archivo HTML principal de tu proyecto.
-  ],
-  darkMode: 'media',  // Usa 'media' para activar el modo oscuro basado en las preferencias del sistema.
-  theme: {
-    extend: {
-      colors: {
-        customBlue: '#1e3a8a',  // Color azul personalizado
-        customGray: '#f7fafc',  // Color gris personalizado
-      },
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],  // Fuente personalizada
-      },
-    },
-  },
-  variants: {
-    extend: {
-      opacity: ['responsive', 'hover', 'focus', 'active'],  // Extiende las variantes para manejar opacidad en diferentes estados
-    },
-  },
-  plugins: [
-    require('@tailwindcss/forms'),  // Añade plugin para estilos de formularios
-    require('@tailwindcss/typography'),  // Añade plugin para estilos de tipografía
-  ],
+	darkMode: 'class', // Usa la clase 'dark' para activar el modo oscuro
+	content: [
+		"./pages/**/*.{js,jsx}",
+		"./components/**/*.{js,jsx}",
+		"./app/**/*.{js,jsx}",
+		"./src/**/*.{js,jsx}",
+	],
+	theme: {
+		container: {
+			center: true,
+			padding: '2rem',
+			screens: {
+				'2xl': '1400px',
+			},
+		},
+		extend: {
+			keyframes: {
+				'accordion-down': {
+					from: {
+						height: '0',
+					},
+					to: {
+						height: 'var(--radix-accordion-content-height)',
+					},
+				},
+				'accordion-up': {
+					from: {
+						height: 'var(--radix-accordion-content-height)',
+					},
+					to: {
+						height: '0',
+					},
+				},
+			},
+			animation: {
+				'accordion-down': 'accordion-down 0.2s ease-out',
+				'accordion-up': 'accordion-up 0.2s ease-out',
+			},
+			colors: {
+				sidebar: {
+					DEFAULT: 'hsl(var(--sidebar-background))',
+					foreground: 'hsl(var(--sidebar-foreground))',
+					primary: 'hsl(var(--sidebar-primary))',
+					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+					accent: 'hsl(var(--sidebar-accent))',
+					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+					border: 'hsl(var(--sidebar-border))',
+					ring: 'hsl(var(--sidebar-ring))',
+				},
+			},
+		},
+	},
+	plugins: [require("tailwindcss-animate")],
 };

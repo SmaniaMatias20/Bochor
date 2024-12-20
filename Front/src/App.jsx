@@ -1,21 +1,15 @@
-// App.jsx
 import { BrowserRouter as Router } from "react-router-dom";
-import './App.css'; // Asegúrate de tener tu archivo de estilos CSS
-
-
+import Navbar from "./components/custom/navbar";
+import './App.css';
 
 const AppContent = () => {
-
   return (
     <div>
-      hola
-      {/* <Routes>
-      </Routes> */}
+      <Navbar />
+
     </div>
   );
 };
-
-
 
 function App() {
   return (

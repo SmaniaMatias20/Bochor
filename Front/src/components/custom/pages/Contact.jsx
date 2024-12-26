@@ -7,13 +7,13 @@ import Testimonials from "../Testimonials";
 
 export function Contact() {
     return (
-        <section className="flex flex-col w-full gap-4 bg-white h-screen">
+        <section className="flex flex-col w-full bg-white">
             <MapEmbed />
-            <div className="flex">
-                <div className="w-2/6 p-4">
+            <div className="flex p-4">
+                <div className="flex flex-col items-center w-2/6">
                     <ContactForm />
                 </div>
-                <div className="flex flex-col gap-4 w-4/6">
+                <div className="flex flex-col items-center justify-center gap-4 w-4/6">
                     <Questions />
                     <Testimonials />
                 </div>

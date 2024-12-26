@@ -58,77 +58,80 @@ const ContactForm = () => {
     };
 
     return (
-        <form
-            onSubmit={handleSubmit}
-            className="space-y-6 p-6 bg-white border-2 border-gray-300 shadow-2xl rounded-xl w-full"
-        >
-            {/* Imagen en la parte superior del formulario */}
-            <div className="mb-4">
-                <img
-                    src="/path/to/your/image.jpg" // Reemplaza esta URL con la ruta de tu imagen
-                    alt="Imagen descriptiva"
-                    className="w-full h-auto rounded-lg object-cover"
-                />
-            </div>
-
-            <div className="space-y-2">
-                <Label htmlFor="name" className="text-sm font-medium text-gray-700">Nombre</Label>
-                <Input
-                    id="name"
-                    name="name"
-                    placeholder="Escribe tu nombre"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
-                />
-            </div>
-            <div className="space-y-2">
-                <Label htmlFor="email" className="text-sm font-medium text-gray-700">Correo Electrónico</Label>
-                <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="correo@ejemplo.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
-                />
-            </div>
-            <div className="space-y-2">
-                <Label htmlFor="subject" className="text-sm font-medium text-gray-700">Asunto</Label>
-                <Input
-                    id="subject"
-                    name="subject"
-                    placeholder="Motivo del mensaje"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
-                />
-            </div>
-            <div className="space-y-2">
-                <Label htmlFor="message" className="text-sm font-medium text-gray-700">Mensaje</Label>
-                <Textarea
-                    id="message"
-                    name="message"
-                    placeholder="Escribe tu mensaje aquí..."
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={5}
-                    required
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
-                />
-            </div>
-            <Button
-                type="submit"
-                disabled={loading}
-                className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg"
+        <>
+            <h2 className="text-2xl font-bold text-gray-800 mb-3 text-center">Formulario de contacto</h2>
+            <form
+                onSubmit={handleSubmit}
+                className="space-y-6 p-6 bg-white border-2 border-gray-300 shadow-2xl rounded-xl w-full"
             >
-                {loading ? "Enviando..." : "Enviar"}
-            </Button>
-        </form>
+                {/* Imagen en la parte superior del formulario */}
+                <div className="mb-4">
+                    <img
+                        src="/path/to/your/image.jpg" // Reemplaza esta URL con la ruta de tu imagen
+                        alt="Imagen descriptiva"
+                        className="w-full h-auto rounded-lg object-cover"
+                    />
+                </div>
+
+                <div className="space-y-2">
+                    <Label htmlFor="name" className="text-sm font-medium text-gray-700">Nombre</Label>
+                    <Input
+                        id="name"
+                        name="name"
+                        placeholder="Escribe tu nombre"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    />
+                </div>
+                <div className="space-y-2">
+                    <Label htmlFor="email" className="text-sm font-medium text-gray-700">Correo Electrónico</Label>
+                    <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="correo@ejemplo.com"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    />
+                </div>
+                <div className="space-y-2">
+                    <Label htmlFor="subject" className="text-sm font-medium text-gray-700">Asunto</Label>
+                    <Input
+                        id="subject"
+                        name="subject"
+                        placeholder="Motivo del mensaje"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    />
+                </div>
+                <div className="space-y-2">
+                    <Label htmlFor="message" className="text-sm font-medium text-gray-700">Mensaje</Label>
+                    <Textarea
+                        id="message"
+                        name="message"
+                        placeholder="Escribe tu mensaje aquí..."
+                        value={formData.message}
+                        onChange={handleChange}
+                        rows={5}
+                        required
+                        className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    />
+                </div>
+                <Button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg"
+                >
+                    {loading ? "Enviando..." : "Enviar"}
+                </Button>
+            </form>
+        </>
     );
 };
 

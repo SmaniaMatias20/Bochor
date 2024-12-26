@@ -27,17 +27,19 @@ const Testimonials = () => {
     ];
 
     return (
-        <div className="border-2 border-gray-300 rounded-xl">
+        <>
             <h2 className="text-2xl font-bold text-gray-800 mb-3 text-center">Lo que dicen nuestro clientes</h2>
-            <div className="max-h-64 overflow-y-auto space-y-4">
-                {testimonios.map((testimonio, index) => (
-                    <div key={index}>
-                        <p className="text-gray-600 italic">"{testimonio.text}"</p>
-                        <p className="mt-2 text-gray-800 font-semibold">- {testimonio.author}</p>
-                    </div>
-                ))}
+            <div className="border-2 border-gray-300 rounded-xl">
+                <div className="max-h-64 overflow-y-auto space-y-4">
+                    {testimonios.map((testimonio, index) => (
+                        <div key={index}>
+                            <p className="text-gray-600 italic">"{testimonio.text}"</p>
+                            <p className="mt-2 text-gray-800 font-semibold">- {testimonio.author}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

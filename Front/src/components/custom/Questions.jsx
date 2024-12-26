@@ -18,7 +18,7 @@ const FAQ = () => {
     return (
         <>
             <h2 className="text-2xl font-bold text-gray-800 mb-3 text-center">Preguntas Frecuentes</h2>
-            <div className="border-2 border-gray-300 rounded-xl">
+            <div className="border-2 border-gray-300 rounded-xl w-full">
                 <div className=" p-6 bg-white h-80 overflow-y-auto">
                     <div className="divide-y divide-gray-200">
                         {faqs.map((faq, index) => (

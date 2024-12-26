@@ -13,7 +13,7 @@ const Navbar = () => {
     { name: "CONTACTO", path: "/Contact" },
 
   ]);
-  const [selectedButton, setSelectedButton] = useState(null); // Estado para el botón seleccionado del segundo navbar
+  const [selectedButton, setSelectedButton] = useState(null);
   const navigate = useNavigate();
 
   const toggleMenu = () => {
@@ -23,11 +23,10 @@ const Navbar = () => {
 
   const handleNavigationSecondNavbar = (path, index) => {
     navigate(path);
-    setSelectedButton(index); // Establecer el botón seleccionado del segundo navbar
+    setSelectedButton(index);
   };
 
   const handleLogout = () => {
-
     navigate("/");
   };
 
@@ -77,20 +76,12 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="sm:hidden bg-white shadow-lg py-4 px-6">
           <div className="flex flex-col mt-4">
-            <div className="flex flex-row space-x-4 border items-center justify-center h-20">
-              <UserRound size={32} />
-              <div className="flex flex-col">
-                <p className="text-lg text-gray-900">
-                  Invitado
-                </p>
-              </div>
-            </div>
             {fieldsNav.map((item, index) => (
               <Button
                 key={index}
                 variant="link"
                 className="text-gray-700 text-sm !no-underline hover:text-gray-900 hover:font-bold hover:scale-105 transition-all"
-                onClick={() => handleNavigationSecondNavbar(item.path)} // Llama a la función de navegación del segundo navbar
+                onClick={() => handleNavigationSecondNavbar(item.path)}
               >
                 {item.name}
               </Button>

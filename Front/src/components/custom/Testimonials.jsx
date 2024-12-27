@@ -30,7 +30,7 @@ const Testimonials = () => {
         <>
             <h2 className="text-2xl font-bold text-gray-800 mb-3 text-center">Lo que dicen nuestro clientes</h2>
             <div className="border-2 border-gray-300 rounded-xl w-full">
-                <div className="max-h-64 overflow-y-auto space-y-4">
+                <div className=" p-6 max-h-64 overflow-y-auto space-y-4">
                     {testimonios.map((testimonio, index) => (
                         <div key={index}>
                             <p className="text-gray-600 italic">"{testimonio.text}"</p>

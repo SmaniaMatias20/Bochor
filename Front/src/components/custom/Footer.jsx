@@ -2,7 +2,7 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 function Footer() {
     return (
-        <footer className="bg-gray-800 text-white py-8">
+        <footer className="bg-gray-950 text-white py-8">
             <div className="max-w-screen-xl mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Sección de Acerca de */}
@@ -19,16 +19,16 @@ function Footer() {
                     <div>
                         <h3 className="text-xl font-semibold mb-4">Enlaces Útiles</h3>
                         <ul>
-                            <li><a href="/about-us" className="hover:text-gray-400">Sobre Nosotros</a></li>
-                            <li><a href="/services" className="hover:text-gray-400">Servicios</a></li>
-                            <li><a href="/careers" className="hover:text-gray-400">Carreras</a></li>
+                            <li><a href="/" className="hover:text-gray-400">Inicio</a></li>
+                            <li><a href="/About" className="hover:text-gray-400">Sobre Nosotros</a></li>
+                            <li><a href="/Services" className="hover:text-gray-400">Servicios</a></li>
                             <li><a href="/contact" className="hover:text-gray-400">Contacto</a></li>
                         </ul>
                     </div>
 
                     {/* Sección de Redes Sociales */}
                     <div>
-                        <h3 className="text-xl font-semibold mb-4">Síguenos</h3>
+                        <h3 className="text-xl font-semibold mb-4">Redes Sociales</h3>
                         <div className="flex gap-4">
                             <a
                                 href="https://www.facebook.com"
@@ -69,7 +69,7 @@ function Footer() {
                 {/* Línea de separación */}
                 <div className="mt-8 border-t border-gray-600 pt-4 text-center">
                     <p className="text-sm">
-                        &copy; 2024 Recursos Humanos S.A. | Todos los derechos reservados.
+                        &copy; 2024 Bochor Consultores S.A. | Todos los derechos reservados.
                     </p>
                 </div>
             </div>

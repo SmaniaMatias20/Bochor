@@ -5,6 +5,8 @@ import ProtectedRouteLogin from "./protected/ProtectedRouteLogin.js";
 import { Home } from "./components/custom/pages/Home.jsx"
 import { About } from "./components/custom/pages/About.jsx"
 import { Contact } from "./components/custom/pages/Contact.jsx"
+import { Services } from "./components/custom/pages/Services.jsx"
+
 
 
 import Navbar from "./components/custom/Navbar.jsx"
@@ -24,6 +26,7 @@ const AppContent = () => {
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/Services" element={<Services />} />
 
       </Routes>
       <Footer />

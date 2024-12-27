@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "../shadcn/button";
 import { UserRound, Logs, LogOut } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import logo from "../../img/logoDefinitivo.webp";
+import logo from '../../img/logo.png';
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,6 +12,7 @@ const Navbar = () => {
   const [fieldsNav, setFieldsNav] = useState([
     { name: "INICIO", path: "/" },
     { name: "NOSOTROS", path: "/About" },
+    { name: "SERVICIOS", path: "/Services" },
     { name: "CONTACTO", path: "/Contact" },
 
   ]);
@@ -88,9 +90,7 @@ const Navbar = () => {
       {/* Segundo Navbar con el nuevo estilo */}
       <div className="relative flex flex-row z-50 w-full h-20 bg-white text-lg items-end justify-between px-4 shadow-md">
         <div className="flex items-center">
-          <p className="text-lg ml-2 font-semibold truncate w-32 sm:w-auto">
-            Logo
-          </p>
+          <img src={logo} alt="Logo" className="h-14" />
         </div>
         <div className="hidden sm:flex space-x-4">
           {fieldsNav.map((item, index) => (
@@ -102,7 +102,7 @@ const Navbar = () => {
             >
               {item.name}
               <span
-                className={`absolute bottom-0 left-0 w-full h-1 bg-sky-700 transform ${selectedButton === index ? "scale-x-100" : "scale-x-0"
+                className={`absolute bottom-0 left-0 w-full h-1 bg-gray-950 transform ${selectedButton === index ? "scale-x-100" : "scale-x-0"
                   } transition-transform duration-150 ease-in-out`}
               />
             </Button>

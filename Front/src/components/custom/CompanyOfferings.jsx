@@ -1,4 +1,5 @@
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '../shadcn/accordion'; // Asegúrate de importar los componentes necesarios
+import { List } from 'lucide-react'; // Importar el ícono de Lucide React
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '../shadcn/accordion';
 
 const CompanyOfferings = () => {
     const offerings = [
@@ -14,13 +15,15 @@ const CompanyOfferings = () => {
             title: "Reclutamiento y Selección",
             description: "Nuestro compromiso como proveedores de servicios de reclutamiento y selección va más allá de simplemente encontrar candidatos calificados. Nos esforzamos por comprender profundamente la esencia de su empresa: su cultura, sus valores fundamentales y los requisitos específicos del puesto que necesita cubrir. Esta comprensión nos permite no solo identificar a los candidatos con las habilidades técnicas necesarias, sino también con el ajuste cultural adecuado para integrarse perfectamente en su equipo."
         },
-        // Puedes agregar más servicios aquí...
     ];
 
     return (
         <section className="py-16 px-4 bg-gray-50 w-full">
 
-            <h2 className="text-3xl font-semibold text-gray-800 mb-8">Servicios</h2>
+            <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8 flex items-center justify-center space-x-2">
+                <span>Servicios</span>
+                <List className="text-gray-800" size={24} />
+            </h2>
             <Accordion type="single" collapsible className="space-y-4 w-full">
                 {offerings.map((offering, index) => (
                     <AccordionItem key={index} value={`item-${index}`}>

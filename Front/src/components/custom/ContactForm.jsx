@@ -6,6 +6,7 @@ import { Textarea } from "../shadcn/textarea";
 import { Button } from "../shadcn/button";
 import { Label } from "../shadcn/label";
 import { useToast } from "../../hooks/use-toast";
+import logoOriginal from "../../img/logo-original.png"
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -65,11 +66,11 @@ const ContactForm = () => {
                 className="space-y-6 p-6 bg-white border-2 border-gray-300 shadow-2xl rounded-xl w-full"
             >
                 {/* Imagen en la parte superior del formulario */}
-                <div className="mb-4">
+                <div className="flex items-center justify-center">
                     <img
-                        src="/path/to/your/image.jpg" // Reemplaza esta URL con la ruta de tu imagen
+                        src={logoOriginal} // Reemplaza esta URL con la ruta de tu imagen
                         alt="Imagen descriptiva"
-                        className="w-full h-auto rounded-lg object-cover"
+                        className="w-40 h-40 rounded-lg object-cover"
                     />
                 </div>
 
@@ -126,7 +127,7 @@ const ContactForm = () => {
                 <Button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg"
+                    className="w-full bg-gray-900 hover:bg-gray-950 text-white font-medium py-2 px-4 rounded-lg"
                 >
                     {loading ? "Enviando..." : "Enviar"}
                 </Button>

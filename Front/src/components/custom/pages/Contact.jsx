@@ -1,8 +1,6 @@
 import ContactForm from "../ContactForm";
 import Questions from "../Questions";
-import OfficeHours from "../OfficeHours";
 import MapEmbed from "../MapEmbed";
-import Testimonials from "../Testimonials";
 
 
 export function Contact() {
@@ -13,9 +11,9 @@ export function Contact() {
                 <div className="flex flex-col items-center w-2/6">
                     <ContactForm />
                 </div>
-                <div className="flex flex-col items-center justify-center gap-4 w-4/6">
+                <div className="flex flex-col  gap-4 w-4/6">
                     <Questions />
-                    <Testimonials />
+
                 </div>
 
             </div>

@@ -13,8 +13,7 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: false,
     rollupOptions: {
-      input: path.resolve(__dirname, 'src/main.jsx'),  // Asegúrate de que Vite sepa cuál es el punto de entrada
+      input: path.resolve(__dirname, 'index.html'), // Apuntar al archivo index.html
     },
   },
 });
-

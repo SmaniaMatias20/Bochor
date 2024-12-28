@@ -2,14 +2,18 @@
 
 import { useState } from "react";
 import { Button } from "../shadcn/button";
+import image1 from "../../img/1.png";
+import image2 from "../../img/2.png";
+import image3 from "../../img/3.png";
+import image4 from "../../img/4.png";
 
 const Banner = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const images = [
-        "/path/to/your/image1.jpg",  // Reemplaza con las rutas correctas de tus imágenes
-        "/path/to/your/image2.jpg",
-        "/path/to/your/image3.jpg",
-        "/path/to/your/image4.jpg",
+        image1,  // Reemplaza con las rutas correctas de tus imágenes
+        image2,
+        image3,
+        image4,
     ];
 
     const handleNext = () => {

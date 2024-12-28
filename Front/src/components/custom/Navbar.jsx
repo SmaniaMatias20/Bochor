@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button } from "../shadcn/button";
-import { LogOut } from "lucide-react";
-import { FaWhatsapp } from 'react-icons/fa'; // Importing WhatsApp icon from react-icons
+import { MdEmail } from 'react-icons/md';
 import { HiMenu, HiX } from 'react-icons/hi'; // Importing icons for menu toggle
 import { useNavigate } from "react-router-dom";
 import logo from '../../img/logo.png';
@@ -34,11 +33,12 @@ const Navbar = () => {
       {/* Barra superior */}
       <div className="gap-12 outline border-b-2">
         <div className="hidden sm:flex flex-row justify-end ">
-          <span className="text-black text-lg font-light rounded-none flex items-center">
-            <FaWhatsapp className="mr-2 text-green-500 text-xl" />
-            +541162559205
+          <span className="mr-2 text-black text-lg font-light rounded-none flex items-center">
+            <MdEmail className="mr-2 text-red-500 text-xl" /> {/* Icono de Gmail */}
+            bochorconsultoresarg@gmail.com
           </span>
         </div>
+
       </div>
 
       {/* Segundo Navbar */}

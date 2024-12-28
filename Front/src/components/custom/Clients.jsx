@@ -1,17 +1,17 @@
 import React from 'react';
-import logo1 from '../../img/clients/logo-aie.png';
+import logo1 from '../../img/clients/logo-aie.jpg';
 import logo2 from '../../img/clients/logo-alzogaray.png';
 import logo3 from '../../img/clients/logo-focus.png';
-import logo4 from '../../img/clients/logo-fridays.png';
+import logo4 from '../../img/clients/logo-fridays.jpg';
 import logo5 from '../../img/clients/logo-lanueva.png';
 import logo6 from '../../img/clients/logo-lared.png';
-import logo7 from '../../img/clients/logo-monarca.png';
+import logo7 from '../../img/clients/logo-monarca.jpg';
 import logo8 from '../../img/clients/logo-nacion.png';
-import logo9 from '../../img/clients/logo-passo.png';
-import logo10 from '../../img/clients/logo-perfil.png';
+import logo9 from '../../img/clients/logo-passo.jpg';
+import logo10 from '../../img/clients/logo-perfil.jpg';
 import logo11 from '../../img/clients/logo-puelche.png';
 import logo12 from '../../img/clients/logo-sc.png';
-import logo13 from '../../img/clients/logo-todo.png';
+import logo13 from '../../img/clients/logo-todo.jpg';
 
 const Clients = () => {
     const clients = [

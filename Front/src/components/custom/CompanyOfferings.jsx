@@ -1,4 +1,4 @@
-import { List } from 'lucide-react'; // Importar el ícono de Lucide React
+import { FaTools } from 'react-icons/fa'; // Importa el ícono de herramientas de React Icons
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '../shadcn/accordion';
 
 const CompanyOfferings = () => {
@@ -22,7 +22,7 @@ const CompanyOfferings = () => {
 
             <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8 flex items-center justify-center space-x-2">
                 <span>Servicios</span>
-                <List className="text-gray-800" size={24} />
+                <FaTools className="text-gray-800" size={24} />
             </h2>
             <Accordion type="single" collapsible className="space-y-4 w-full">
                 {offerings.map((offering, index) => (

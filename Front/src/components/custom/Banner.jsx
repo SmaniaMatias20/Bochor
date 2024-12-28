@@ -28,10 +28,10 @@ const Banner = () => {
 
     return (
         <div className="relative w-full h-[500px] overflow-hidden">
-            <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+            <div className="flex h-[500px]  transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                 {images.map((image, index) => (
-                    <div key={index} className="w-full flex-shrink-0">
-                        <img src={image} alt={`Image ${index + 1}`} className="w-full h-full object-cover" />
+                    <div key={index} className="w-full h-[500px]  flex-shrink-0">
+                        <img src={image} alt={`Image ${index + 1}`} className="w-full h-[500px] object-cover" />
                     </div>
                 ))}
             </div>

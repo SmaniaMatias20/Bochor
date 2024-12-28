@@ -15,15 +15,19 @@ const CompanyOfferings = () => {
             title: "Reclutamiento y Selección",
             description: "Nuestro compromiso como proveedores de servicios de reclutamiento y selección va más allá de simplemente encontrar candidatos calificados. Nos esforzamos por comprender profundamente la esencia de su empresa: su cultura, sus valores fundamentales y los requisitos específicos del puesto que necesita cubrir. Esta comprensión nos permite no solo identificar a los candidatos con las habilidades técnicas necesarias, sino también con el ajuste cultural adecuado para integrarse perfectamente en su equipo."
         },
+        {
+            title: "Desarrollo Organizacional",
+            description: "Ofrecemos programas diseñados para impulsar el crecimiento y el desarrollo organizacional. Desde la evaluación del clima laboral hasta la implementación de estrategias de cambio organizacional, trabajamos para optimizar el rendimiento y la eficiencia de tu empresa."
+        },
+        {
+            title: "Capacitación y Desarrollo",
+            description: "Nos enfocamos en la formación continua del personal a través de talleres, cursos y programas de capacitación adaptados a las necesidades de tu empresa. Ayudamos a fortalecer habilidades técnicas, de liderazgo y comunicación para garantizar un equipo preparado para afrontar los desafíos del mercado."
+        },
     ];
+
 
     return (
         <section className="py-16 px-4 bg-gray-50 w-full">
-
-            <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8 flex items-center justify-center space-x-2">
-                <span>Servicios</span>
-                <FaTools className="text-gray-800" size={24} />
-            </h2>
             <Accordion type="single" collapsible className="space-y-4 w-full">
                 {offerings.map((offering, index) => (
                     <AccordionItem key={index} value={`item-${index}`}>

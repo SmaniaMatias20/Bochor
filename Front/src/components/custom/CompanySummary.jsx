@@ -19,7 +19,7 @@ const CompanySummary = () => {
                     </a>
                     <a
                         href="/contact"
-                        className="bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-800 transition duration-300"
+                        className="bg-gray-900 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-950 transition duration-300"
                     >
                         Contáctanos
                     </a>

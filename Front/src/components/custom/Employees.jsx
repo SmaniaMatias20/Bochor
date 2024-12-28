@@ -28,7 +28,6 @@ const Employees = () => {
     return (
         <section className="py-16 px-4 bg-gray-50">
             <div className="max-w-screen-xl mx-auto text-center">
-                <h2 className="text-3xl font-semibold text-gray-800 mb-8">Nuestro Equipo</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                     {employees.map((employee, index) => (
                         <Card key={index} className="max-w-xs shadow-lg rounded-xl">

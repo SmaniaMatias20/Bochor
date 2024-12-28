@@ -8,7 +8,7 @@ const CalendarEvents = () => {
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [events, setEvents] = useState([
         { date: '2024-12-28', description: 'Client meeting' },
-        { date: '2024-12-30', description: 'Job interview' },
+        { date: '2024-12-28', description: 'Job interview' },
         { date: '2024-12-31', description: 'Goal review' },
     ]);
 

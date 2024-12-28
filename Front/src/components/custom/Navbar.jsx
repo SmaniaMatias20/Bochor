@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "../shadcn/button";
 import { LogOut } from "lucide-react";
 import { FaWhatsapp } from 'react-icons/fa'; // Importing WhatsApp icon from react-icons
+import { HiMenu, HiX } from 'react-icons/hi'; // Importing icons for menu toggle
 import { useNavigate } from "react-router-dom";
 import logo from '../../img/logo.png';
 
@@ -19,47 +20,42 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen); // Alterna el estado del menú
   };
 
   const handleNavigationSecondNavbar = (path, index) => {
     navigate(path);
     setSelectedButton(index);
-  };
-
-  const handleLogout = () => {
-    navigate("/");
+    setIsMenuOpen(false); // Cierra el menú después de navegar
   };
 
   return (
     <div className="bg-gray-50">
-      <div className="gap-12 outline border-b-2 ">
+      {/* Barra superior */}
+      <div className="gap-12 outline border-b-2">
         <div className="hidden sm:flex flex-row justify-end ">
           <span className="text-black text-lg font-light rounded-none flex items-center">
-            <FaWhatsapp className="mr-2 text-green-500 text-xl" /> {/* Enlarged WhatsApp Icon */}
-            +541162559205
-          </span>
-        </div>
-        <div className="sm:hidden flex items-end justify-end mr-1">
-          <span className="text-black text-lg font-light rounded-none flex items-center">
-            <FaWhatsapp className="mr-2 text-green-500 text-xl" /> {/* Enlarged WhatsApp Icon */}
+            <FaWhatsapp className="mr-2 text-green-500 text-xl" />
             +541162559205
           </span>
         </div>
       </div>
 
-      {/* Segundo Navbar con el nuevo estilo */}
-      <div className="relative flex flex-row z-50 w-full h-20 bg-white text-lg items-end justify-between px-4 shadow-md">
+      {/* Segundo Navbar */}
+      <div className="relative flex flex-row z-50 w-full h-20 bg-white text-lg items-center justify-between px-4 shadow-md">
+        {/* Logo */}
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-14" />
         </div>
+
+        {/* Menú para pantallas grandes */}
         <div className="hidden sm:flex space-x-4">
           {fieldsNav.map((item, index) => (
             <Button
               key={index}
               variant="link"
               className={`text-gray-700 text-sm !no-underline transition-transform duration-300 ease-in-out relative pb-2`}
-              onClick={() => handleNavigationSecondNavbar(item.path, index)} // Llama a la función de navegación del segundo navbar
+              onClick={() => handleNavigationSecondNavbar(item.path, index)}
             >
               {item.name}
               <span
@@ -68,36 +64,37 @@ const Navbar = () => {
               />
             </Button>
           ))}
-          <Button
-            onClick={handleLogout}
-            variant="link"
-            className="text-gray-700 text-sm pb-2"
+        </div>
+
+        {/* Botón de menú para pantallas pequeñas */}
+        <div className="sm:hidden">
+          <button
+            onClick={toggleMenu}
+            className="text-gray-700 focus:outline-none"
           >
-            <LogOut />
-          </Button>
+            {isMenuOpen ? (
+              <HiX className="w-8 h-8" /> // Icono de cierre
+            ) : (
+              <HiMenu className="w-8 h-8" /> // Icono de menú
+            )}
+          </button>
         </div>
       </div>
 
+      {/* Menú desplegable para dispositivos móviles */}
       {isMenuOpen && (
         <div className="sm:hidden bg-white shadow-lg py-4 px-6">
-          <div className="flex flex-col mt-4">
+          <div className="flex flex-col mt-4 space-y-4">
             {fieldsNav.map((item, index) => (
               <Button
                 key={index}
                 variant="link"
                 className="text-gray-700 text-sm !no-underline hover:text-gray-900 hover:font-bold hover:scale-105 transition-all"
-                onClick={() => handleNavigationSecondNavbar(item.path)}
+                onClick={() => handleNavigationSecondNavbar(item.path, index)}
               >
                 {item.name}
               </Button>
             ))}
-            <Button
-              onClick={handleLogout}
-              variant="link"
-              className="text-gray-700 text-sm mt-2 w-full"
-            >
-              <LogOut />
-            </Button>
           </div>
         </div>
       )}

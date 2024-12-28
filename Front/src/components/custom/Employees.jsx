@@ -22,13 +22,24 @@ const Employees = () => {
             description: "Consultor experimentado en la gestión de procesos de selección y asesoramiento estratégico para empresas.",
             image: employee
         },
+
+        {
+            name: "Carlos Rodríguez",
+            position: "Consultor Senior",
+            description: "Consultor experimentado en la gestión de procesos de selección y asesoramiento estratégico para empresas.",
+            image: employee
+        },
         // Puedes agregar más empleados aquí...
     ];
 
     return (
         <section className="py-16 px-4 bg-gray-50">
+            <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
+                Nuestro equipo de trabajo
+            </h2>
+
             <div className="max-w-screen-xl mx-auto text-center">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                     {employees.map((employee, index) => (
                         <Card key={index} className="max-w-xs shadow-lg rounded-xl">
                             <CardHeader className="p-8 mb-4"> {/* Eliminar padding para que la imagen ocupe toda la parte superior */}

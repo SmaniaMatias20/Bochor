@@ -63,7 +63,7 @@ const ContactForm = () => {
             <h2 className="text-2xl font-bold text-gray-800 mb-3 text-center">Formulario de contacto</h2>
             <form
                 onSubmit={handleSubmit}
-                className="space-y-6 p-6 bg-white border-2 border-gray-300 shadow-2xl rounded-xl w-full"
+                className="space-y-6 p-6 bg-white border-2 border-gray-300 rounded-xl w-full"
             >
                 {/* Imagen en la parte superior del formulario */}
                 <div className="flex items-center justify-center">

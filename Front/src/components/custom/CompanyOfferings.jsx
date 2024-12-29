@@ -1,4 +1,4 @@
-import { FaTools } from 'react-icons/fa'; // Importa el ícono de herramientas de React Icons
+
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '../shadcn/accordion';
 
 const CompanyOfferings = () => {

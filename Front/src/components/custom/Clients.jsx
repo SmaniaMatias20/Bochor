@@ -32,23 +32,13 @@ const Clients = () => {
 
     return (
         <div className="container mx-auto p-4">
-            {/* Fila de 6 logos */}
-            <div className="grid grid-cols-6 gap-6 mb-6">
-                {clients.slice(0, 6).map((client) => (
-                    <div key={client.id} className="flex flex-col items-center p-4 border rounded-lg shadow-md hover:shadow-lg">
-                        <img
-                            src={client.logo}
-                            alt={`${client.name} logo`}
-                            className="h-24 w-24 object-contain mb-4"
-                        />
-                    </div>
-                ))}
-            </div>
-
-            {/* Fila de 7 logos */}
-            <div className="grid grid-cols-7 gap-6">
-                {clients.slice(6).map((client) => (
-                    <div key={client.id} className="flex flex-col items-center p-4 border rounded-lg shadow-md hover:shadow-lg">
+            {/* Grid Responsivo */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+                {clients.map((client) => (
+                    <div
+                        key={client.id}
+                        className="flex flex-col items-center p-4 border rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                    >
                         <img
                             src={client.logo}
                             alt={`${client.name} logo`}

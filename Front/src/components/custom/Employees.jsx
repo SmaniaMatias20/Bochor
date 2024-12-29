@@ -24,8 +24,6 @@ const Employees = () => {
             description: "Consultor experimentado en la gestión de procesos de selección y asesoramiento estratégico para empresas.",
             image: employee2
         },
-
-        // Puedes agregar más empleados aquí...
     ];
 
     return (
@@ -34,24 +32,36 @@ const Employees = () => {
                 Nuestro equipo de trabajo
             </h2>
 
-            <div className="flex justify-center items-center max-w-screen-xl mx-auto text-center">
-                <div className="flex gap-8 justify-center">
-                    {employees.map((employee, index) => (
-                        <Card key={index} className="max-w-xs mx-auto shadow-lg rounded-xl overflow-hidden">
-                            {/* Imagen en la parte superior ocupando todo el ancho y alto de la carta */}
-                            <div className="w-full h-64">
-                                <img src={employee.image} alt={employee.name} className="object-cover w-full h-full" />
-                            </div>
-                            <CardHeader className="p-4">
-                                <CardTitle className="font-semibold text-center text-lg">{employee.name}</CardTitle>
-                                <CardDescription className="font-semibold text-gray-600">{employee.position}</CardDescription>
-                            </CardHeader>
-                            <CardContent className="p-4">
-                                <p className="text-gray-700 text-sm">{employee.description}</p>
-                            </CardContent>
-                        </Card>
-                    ))}
-                </div>
+            {/* Contenedor responsivo */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-screen-xl mx-auto">
+                {employees.map((employee, index) => (
+                    <Card
+                        key={index}
+                        className="shadow-lg rounded-xl overflow-hidden transition-transform transform hover:scale-105"
+                    >
+                        {/* Imagen en la parte superior */}
+                        <div className="w-full h-64">
+                            <img
+                                src={employee.image}
+                                alt={employee.name}
+                                className="object-cover w-full h-full"
+                            />
+                        </div>
+                        {/* Encabezado */}
+                        <CardHeader className="p-4">
+                            <CardTitle className="font-semibold text-center text-lg">
+                                {employee.name}
+                            </CardTitle>
+                            <CardDescription className="font-semibold text-gray-600">
+                                {employee.position}
+                            </CardDescription>
+                        </CardHeader>
+                        {/* Descripción */}
+                        <CardContent className="p-4">
+                            <p className="text-gray-700 text-sm">{employee.description}</p>
+                        </CardContent>
+                    </Card>
+                ))}
             </div>
         </section>
     );

@@ -1,28 +1,28 @@
 import CompanyOfferings from "../CompanyOfferings";
 import WhyChooseUs from "../WhyChooseUs";
 import Recommendations from "../Recommendations";
-import { FaTools } from 'react-icons/fa';
 
 export function Services() {
     return (
-        <section className="flex flex-col items-center min-h-screen w-full bg-white p-0 md:p-0 lg:p-0">
-            <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8 flex items-center justify-center mt-6 space-x-2">
-                <span>Servicios</span>
-                <FaTools className="text-gray-800" size={24} />
+        <section className="flex flex-col items-center min-h-screen w-full bg-white p-4 md:p-6 lg:p-8">
+            <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8 mt-6">
+                Servicios
             </h2>
-            {/* Contenedor dividido en dos mitades */}
-            <div className="flex w-full h-[500px]">
-                {/* Mitad para CompanyOfferings */}
-                <div className="w-1/2 p-4">
+            {/* Contenedor adaptable */}
+            <div className="flex flex-col md:flex-row w-full gap-6">
+                {/* Sección para CompanyOfferings */}
+                <div className="w-full md:w-1/2 p-4 bg-gray-50 rounded-lg shadow-md">
                     <CompanyOfferings />
                 </div>
-                {/* Mitad para Recommendations */}
-                <div className="w-1/2 p-4">
+                {/* Sección para Recommendations */}
+                <div className="w-full md:w-1/2 p-4 bg-gray-50 rounded-lg shadow-md">
                     <Recommendations />
                 </div>
             </div>
-            {/* Sección adicional */}
-            <WhyChooseUs />
+            {/* Sección adicional para WhyChooseUs */}
+            <div className="mt-8 w-full p-4 bg-gray-50 rounded-lg shadow-md">
+                <WhyChooseUs />
+            </div>
         </section>
     );
 }

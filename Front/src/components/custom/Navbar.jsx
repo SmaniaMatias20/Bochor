@@ -42,14 +42,14 @@ const Navbar = () => {
       </div>
 
       {/* Segundo Navbar */}
-      <div className="relative flex flex-row z-50 w-full h-20 bg-white text-lg items-center justify-between px-4 shadow-md">
+      <div className="relative flex flex-row z-50 w-full h-16 bg-white text-lg justify-between px-4 shadow-md">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-end">
           <img src={logo} alt="Logo" className="h-14" />
         </div>
 
         {/* Menú para pantallas grandes */}
-        <div className="hidden sm:flex space-x-4">
+        <div className="flex items-end hidden sm:flex space-x-4">
           {fieldsNav.map((item, index) => (
             <Button
               key={index}

@@ -30,7 +30,7 @@ const Timeline = () => {
                 Historia de la Empresa
             </h2>
 
-            <div className="flex flex-col md:flex-row md:justify-center items-start space-y-8 md:space-y-0 md:space-x-12">
+            <div className="flex flex-col md:flex-row md:justify-center items-center space-y-8 md:space-y-0 md:space-x-12">
                 {events.map((event, index) => (
                     <div key={index} className="flex items-center">
 

@@ -27,7 +27,7 @@ const CompanyOfferings = () => {
 
 
     return (
-        <section className="py-16 px-4 bg-gray-50 w-full">
+        <section className="bg-gray-50 w-full">
             <Accordion type="single" collapsible className="space-y-4 w-full">
                 {offerings.map((offering, index) => (
                     <AccordionItem key={index} value={`item-${index}`}>

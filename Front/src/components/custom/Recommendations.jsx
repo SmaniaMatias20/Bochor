@@ -14,7 +14,7 @@ const Recommendations = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center px-4 py-8">
+        <div className="flex flex-col items-center">
             {/* Carrusel que cambia solo de imagen */}
             <Carousel
                 opts={{

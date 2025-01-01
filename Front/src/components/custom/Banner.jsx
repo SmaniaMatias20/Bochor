@@ -23,8 +23,8 @@ const Banner = () => {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious className="bg-black text-white p-2 rounded-full" />
-                <CarouselNext className="bg-black text-white p-2 rounded-full" />
+                <CarouselPrevious />
+                <CarouselNext />
             </Carousel>
         </div>
     );

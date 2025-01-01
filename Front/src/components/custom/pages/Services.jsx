@@ -9,7 +9,7 @@ export function Services() {
                 Servicios
             </h2>
             {/* Contenedor adaptable */}
-            <div className="flex flex-col md:flex-row w-full gap-6">
+            <div className="flex flex-col md:flex-row w-full gap-6 md:gap-0">
                 {/* Sección para CompanyOfferings */}
                 <div className="w-full md:w-1/2 p-4 bg-gray-50 rounded-lg shadow-md">
                     <CompanyOfferings />

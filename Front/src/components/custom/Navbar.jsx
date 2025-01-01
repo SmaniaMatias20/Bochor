@@ -67,7 +67,7 @@ const Navbar = () => {
         </div>
 
         {/* Botón de menú para pantallas pequeñas */}
-        <div className="sm:hidden">
+        <div className="flex items-center sm:hidden">
           <button
             onClick={toggleMenu}
             className="text-gray-700 focus:outline-none"

@@ -4,7 +4,7 @@ import CompanySummary from "../CompanySummary";
 
 export function Home() {
   return (
-    <section className="flex flex-col items-center min-h-screen w-screen bg-white md:p-6 lg:p-8">
+    <section className="flex flex-col w-full bg-white">
       {/* Sección del banner */}
       <div className="hidden md:block w-screen">
         <Banner />

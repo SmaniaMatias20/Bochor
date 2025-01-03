@@ -2,7 +2,7 @@ import { Settings, CheckCircle, RefreshCcw, Users } from 'lucide-react';
 
 const WhyChooseUs = () => {
     return (
-        <section className="bg-white ">
+        <section className="bg-white">
             <div className="max-w-screen-xl mx-auto text-center">
                 <h2 className="text-3xl font-semibold text-gray-800 mb-6">¿Por qué elegirnos?</h2>
                 <p className="text-lg text-gray-600 mb-12">

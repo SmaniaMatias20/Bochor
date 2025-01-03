@@ -3,6 +3,9 @@ import Questions from "../Questions";
 import MapEmbed from "../MapEmbed";
 import WhatsAppButton from "../WhatsAppButton";
 
+
+
+
 export function Contact() {
     return (
         <section className="flex flex-col w-full bg-white">
@@ -20,6 +23,7 @@ export function Contact() {
                 <div className="flex flex-col gap-3 w-full md:w-4/6">
                     <Questions />
                 </div>
+                {/* Información de contacto */}
                 <WhatsAppButton />
 
             </div>

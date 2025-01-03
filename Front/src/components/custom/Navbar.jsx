@@ -83,7 +83,7 @@ const Navbar = () => {
 
       {/* Menú desplegable para dispositivos móviles */}
       {isMenuOpen && (
-        <div className="sm:hidden bg-white shadow-lg py-4 px-6">
+        <div className="sm:hidden absolute top-16 left-0 right-0 bg-white shadow-lg py-4 px-6 z-50">
           <div className="flex flex-col mt-4 space-y-4">
             {fieldsNav.map((item, index) => (
               <Button

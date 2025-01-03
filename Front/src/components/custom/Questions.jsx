@@ -19,7 +19,7 @@ const FAQ = () => {
         <>
             <h2 className="text-2xl font-bold text-gray-800 text-center">Preguntas Frecuentes</h2>
             <div className="border-2 border-gray-300 rounded-xl w-full">
-                <div className=" p-6 bg-white h-96 overflow-y-auto rounded-xl">
+                <div className="p-6 bg-white h-96 overflow-y-auto rounded-xl">
                     <div className="divide-y divide-gray-200">
                         {faqs.map((faq, index) => (
                             <div key={index} className="py-4">

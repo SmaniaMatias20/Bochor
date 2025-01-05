@@ -1,7 +1,4 @@
 "use client";
-import { useState, useEffect } from "react";
-
-import PlanetEarth from "./PlanetEarth";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../shadcn/carousel";
 import { Rocket, Briefcase, Users, Building } from "lucide-react";
 
@@ -40,9 +37,6 @@ const Banner = () => {
                             <div
                                 className="absolute top-0 left-0 w-full h-full flex items-center justify-end p-10 md:p-16 z-60 bg-gradient-to-r from-gray-800 via-gray-900 to-gray-950"
                             >
-                                {/* Renderizar el componente adecuado según si es día o noche */}
-                                <PlanetEarth />
-
                                 <div className="bg-white p-8 md:p-14 rounded-lg shadow-lg max-w-lg z-999">
                                     <div className="flex items-center mb-6">
                                         {message.icon}

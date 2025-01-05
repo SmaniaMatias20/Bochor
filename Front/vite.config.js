@@ -16,4 +16,14 @@ export default defineConfig({
       input: path.resolve(__dirname, 'index.html'), // Apuntar al archivo index.html
     },
   },
+  server: {
+    proxy: {
+      '/textures': {
+        target: 'https://www.solarsystemscope.com',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/textures/, ''),
+      },
+    },
+  },
 });

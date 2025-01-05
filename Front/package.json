@@ -34,14 +34,11 @@
     "react-hook-form": "^7.53.2",
     "react-icons": "^5.4.0",
     "react-router-dom": "^6.28.0",
-    "react-signature-canvas": "^1.0.6",
-    "reactflow": "^11.11.4",
     "recharts": "^2.13.3",
     "shadcn-ui": "^0.8.0",
     "styled-components": "^6.1.12",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
-    "three": "^0.172.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {

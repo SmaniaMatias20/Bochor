@@ -4,11 +4,11 @@ FROM node:18-alpine
 # Establecer el directorio de trabajo
 WORKDIR /app
 
-# Copiar los archivos del proyecto
+# Copiar los archivos de dependencias primero
 COPY package.json package-lock.json* ./
 
 # Instalar dependencias
-RUN npm install --production
+RUN npm install
 
 # Copiar el resto del código
 COPY . .
@@ -16,8 +16,5 @@ COPY . .
 # Exponer el puerto que usa el backend
 EXPOSE 3000
 
-# Definir la variable de entorno
-ENV NODE_ENV=production
-
 # Comando para ejecutar la aplicación
-CMD ["node", "index.js"]
+CMD ["npm", "run", "dev"]

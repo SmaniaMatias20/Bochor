@@ -7,7 +7,7 @@
     "dev": "nodemon index.js",
     "start": "node index.js"
   },
-  "author": "Pichi",
+  "author": "MES",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",

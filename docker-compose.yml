@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   backend:
-    image: bochor-backend
+    image: ${{ secrets.DOCKER_USERNAME }}/bochor-backend:latest  # Etiquetar la imagen para Docker Hub
     build:
       context: ./Back
       dockerfile: Dockerfile
@@ -13,7 +13,7 @@ services:
     restart: always
 
   frontend:
-    image: bochor-frontend
+    image: ${{ secrets.DOCKER_USERNAME }}/bochor-frontend:latest  # Etiquetar la imagen para Docker Hub
     build:
       context: ./Front
       dockerfile: Dockerfile

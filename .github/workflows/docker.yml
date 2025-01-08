@@ -23,19 +23,24 @@ jobs:
 
       - name: Build Docker images
         run: |
-          # Construir las imágenes utilizando Docker Compose
           docker-compose -f docker-compose.yml build
+          docker-compose -f docker-compose.yml up -d
 
       - name: Push Docker images
         run: |
-          # Etiquetar las imágenes y subirlas a Docker Hub
-          docker tag bochor-frontend:latest ${{ secrets.DOCKER_USERNAME }}/bochor-frontend:latest
-          docker tag bochor-backend:latest ${{ secrets.DOCKER_USERNAME }}/bochor-backend:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/bochor-frontend:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/bochor-backend:latest
+          docker push bochor-frontend
+          docker push bochor-backend
 
-      - name: Restart Containers
-        run: |
-          # Detener y levantar los contenedores con Docker Compose
-          docker-compose -f docker-compose.yml down
-          docker-compose -f docker-compose.yml up -d
+      - name: SSH into Raspberry Pi and pull the latest Docker images
+        uses: appleboy/ssh-action@v0.1.3
+        with:
+          host: ${{ secrets.RASPBERRY_PI_HOST }}
+          username: ${{ secrets.RASPBERRY_PI_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            cd ~/mi-carpeta-de-proyecto
+            docker pull bochor-frontend
+            docker pull bochor-backend
+            docker-compose down
+            docker-compose up -d

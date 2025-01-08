@@ -3,7 +3,7 @@ name: Build and Deploy Docker Containers
 on:
   push:
     branches:
-      - master 
+      - master
 
 jobs:
   build:
@@ -42,7 +42,18 @@ jobs:
           docker push ${{ secrets.DOCKER_USERNAME }}/bochor-frontend:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/bochor-backend:latest
 
-      - name: Restart Containers
-        run: |
-          docker-compose -f docker-compose.yml down
-          docker-compose -f docker-compose.yml up -d
+      - name: SSH into Raspberry Pi and Update Containers
+        uses: appleboy/ssh-action@v0.1.5
+        with:
+          host: ${{ secrets.RASPBERRY_PI_HOST }}  # Dirección IP de la Raspberry Pi
+          username: ${{ secrets.RASPBERRY_PI_USER }}  # Usuario de la Raspberry Pi
+          key: ${{ secrets.SSH_PRIVATE_KEY }}  # La clave privada SSH de GitHub
+          port: 22
+          script: |
+            # Actualizar imágenes Docker en la Raspberry Pi
+            docker pull ${{ secrets.DOCKER_USERNAME }}/bochor-frontend:latest
+            docker pull ${{ secrets.DOCKER_USERNAME }}/bochor-backend:latest
+            
+            # Reiniciar contenedores
+            docker-compose -f /path/to/your/docker-compose.yml down
+            docker-compose -f /path/to/your/docker-compose.yml up -d

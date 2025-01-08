@@ -2,7 +2,10 @@ version: '3.8'
 
 services:
   backend:
-    image: mesvirtual/bochor-backend:latest  # Imagen desde Docker Hub
+    image: mesvirtual/bochor-backend:latest  # Sin interpolación directa
+    build:
+      context: ./Back
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     environment:
@@ -10,7 +13,10 @@ services:
     restart: always
 
   frontend:
-    image: mesvirtual/bochor-frontend:latest  # Imagen desde Docker Hub
+    image: mesvirtual/bochor-frontend:latest  # Sin interpolación directa
+    build:
+      context: ./Front
+      dockerfile: Dockerfile
     ports:
       - "80:80"
     restart: always

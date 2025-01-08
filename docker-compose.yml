@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   backend:
-    image: bochor-backend:latest  # La imagen sin el nombre de usuario
+    image: ${{ secrets.DOCKER_USERNAME }}/bochor-backend:latest  # Nombre con el usuario de Docker Hub
     build:
       context: ./Back
       dockerfile: Dockerfile
@@ -13,7 +13,7 @@ services:
     restart: always
 
   frontend:
-    image: bochor-frontend:latest  # La imagen sin el nombre de usuario
+    image: ${{ secrets.DOCKER_USERNAME }}/bochor-frontend:latest  # Nombre con el usuario de Docker Hub
     build:
       context: ./Front
       dockerfile: Dockerfile

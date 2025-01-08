@@ -31,16 +31,14 @@ jobs:
           docker push bochor-frontend
           docker push bochor-backend
 
-      - name: SSH into Raspberry Pi and pull the latest Docker images
-        uses: appleboy/ssh-action@v0.1.3
+      - name: SSH into Raspberry Pi and restart containers
+        uses: appleboy/ssh-action@v0.1.0
         with:
           host: ${{ secrets.RASPBERRY_PI_HOST }}
           username: ${{ secrets.RASPBERRY_PI_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22
+          key: ${{ secrets.RASPBERRY_PI_PRIVATE_KEY }}
           script: |
-            cd ~/mi-carpeta-de-proyecto
-            docker pull bochor-frontend
-            docker pull bochor-backend
+            cd ~/Desktop/Bochor
             docker-compose down
             docker-compose up -d
+

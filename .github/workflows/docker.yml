@@ -46,7 +46,7 @@ jobs:
         uses: appleboy/ssh-action@v0.1.5
         with:
           host: ${{ secrets.RASPBERRY_PI_HOST }}  # Dirección IP de la Raspberry Pi
-          username: ${{ secrets.RASPBERRY_PI_USER }}  # Usuario de la Raspberry Pi
+          username: ${{ secrets.RASPBERRY_PI_USERNAME }}  # Usuario de la Raspberry Pi
           key: ${{ secrets.SSH_PRIVATE_KEY }}  # La clave privada SSH de GitHub
           port: 22
           script: |

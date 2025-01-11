@@ -6,7 +6,6 @@ services:
     build:
       context: ./Back
       dockerfile: Dockerfile
-    platform: linux/arm64/v8  
     ports:
       - "3000:3000"
     environment:
@@ -18,7 +17,6 @@ services:
     build:
       context: ./Front
       dockerfile: Dockerfile
-    platform: linux/arm64/v8
     ports:
       - "80:80"
     restart: always

@@ -3,7 +3,7 @@ version: '3.8'
 services:
   backend:
     image: mesvirtual/bochor-backend:${COMMIT_HASH}  # Usando el hash del commit como etiqueta
-     platform: linux/arm64 
+    platform: linux/arm64 
     build:
       context: ./Back
       dockerfile: Dockerfile

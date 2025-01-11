@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   backend:
-    image: mesvirtual/bochor-backend:latest  # Sin interpolación directa
+    image: mesvirtual/bochor-backend:${COMMIT_HASH}  # Usando el hash del commit como etiqueta
     platform: linux/amd64
     build:
       context: ./Back
@@ -14,7 +14,7 @@ services:
     restart: always
 
   frontend:
-    image: mesvirtual/bochor-frontend:latest  # Sin interpolación directa
+    image: mesvirtual/bochor-frontend:${COMMIT_HASH}  # Usando el hash del commit como etiqueta
     platform: linux/amd64
     build:
       context: ./Front

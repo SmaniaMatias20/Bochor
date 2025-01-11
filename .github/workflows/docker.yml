@@ -43,8 +43,8 @@ jobs:
 
       - name: Tag Docker images with commit hash
         run: |
-          docker tag mesvirtual/bochor-frontend:latest ${{ secrets.DOCKER_USERNAME }}/bochor-frontend:${{ steps.commit.outputs.commit }}
-          docker tag mesvirtual/bochor-backend:latest ${{ secrets.DOCKER_USERNAME }}/bochor-backend:${{ steps.commit.outputs.commit }}
+          docker tag bochor-frontend:latest ${{ secrets.DOCKER_USERNAME }}/bochor-frontend:${{ steps.commit.outputs.commit }}
+          docker tag bochor-backend:latest ${{ secrets.DOCKER_USERNAME }}/bochor-backend:${{ steps.commit.outputs.commit }}
 
       - name: Push Docker images
         run: |

@@ -3,7 +3,7 @@ version: '3.8'
 services:
   backend:
     image: mesvirtual/bochor-backend:latest  # Sin interpolación directa
-
+    platform: linux/amd64
     build:
       context: ./Back
       dockerfile: Dockerfile
@@ -15,7 +15,7 @@ services:
 
   frontend:
     image: mesvirtual/bochor-frontend:latest  # Sin interpolación directa
-
+    platform: linux/amd64
     build:
       context: ./Front
       dockerfile: Dockerfile

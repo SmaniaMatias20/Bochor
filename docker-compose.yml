@@ -2,8 +2,10 @@ version: '3.8'
 
 services:
   backend:
-    image: mesvirtual/bochor-backend:latest  
-    platform: linux/arm64 
+    image: mesvirtual/bochor-backend:latest
+    platform:
+      - linux/amd64
+      - linux/arm64  # Permite las dos arquitecturas
     build:
       context: ./Back
       dockerfile: Dockerfile
@@ -14,8 +16,10 @@ services:
     restart: always
 
   frontend:
-    image: mesvirtual/bochor-frontend:latest 
-    platform: linux/arm64 
+    image: mesvirtual/bochor-frontend:latest
+    platform:
+      - linux/amd64
+      - linux/arm64  # Permite las dos arquitecturas
     build:
       context: ./Front
       dockerfile: Dockerfile

@@ -9,9 +9,9 @@ if [ ! -f "$COMPOSE_FILE" ]; then
   exit 1
 fi
 
-# Actualizar imágenes desde Docker Hub
-echo "Descargando las últimas imágenes..."
-docker-compose -f "$COMPOSE_FILE" pull
+# Actualizar imágenes desde Docker Hub para la arquitectura arm64/v8
+echo "Descargando las últimas imágenes para arm64/v8..."
+docker-compose -f "$COMPOSE_FILE" pull --platform linux/arm64/v8
 
 # Reiniciar los contenedores con las nuevas imágenes
 echo "Reiniciando los contenedores..."
@@ -22,4 +22,5 @@ echo "Eliminando imágenes antiguas..."
 docker image prune -f
 
 echo "Actualización completada exitosamente."
+
 

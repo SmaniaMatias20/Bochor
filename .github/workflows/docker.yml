@@ -30,10 +30,6 @@ jobs:
       - name: Set environment variables for Docker Compose
         run: echo "DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}" >> $GITHUB_ENV
 
-      - name: Get commit hash
-        id: commit
-        run: echo "::set-output name=commit::$(git rev-parse --short HEAD)"
-
       - name: Build Docker images
         run: |
           docker-compose -f docker-compose.yml build --build-arg DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}
@@ -41,12 +37,8 @@ jobs:
       - name: List Docker images
         run: docker images
 
-      - name: Tag Docker images with commit hash
-        run: |
-          docker tag mesvirtual/bochor-frontend:latest ${{ secrets.DOCKER_USERNAME }}/bochor-frontend:${{ steps.commit.outputs.commit }}
-          docker tag mesvirtual/bochor-backend:latest ${{ secrets.DOCKER_USERNAME }}/bochor-backend:${{ steps.commit.outputs.commit }}
-
       - name: Push Docker images
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/bochor-frontend:${{ steps.commit.outputs.commit }}
-          docker push ${{ secrets.DOCKER_USERNAME }}/bochor-backend:${{ steps.commit.outputs.commit }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/bochor-frontend:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/bochor-backend:latest
+

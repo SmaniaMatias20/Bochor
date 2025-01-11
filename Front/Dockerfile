@@ -1,5 +1,5 @@
 # Seleccionar la plataforma correcta para ARM64
-FROM node:18-alpine
+FROM node:18-alpine AS build
 
 # Establecer el directorio de trabajo
 WORKDIR /app

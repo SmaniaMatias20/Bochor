@@ -1,5 +1,5 @@
 # Seleccionar la plataforma correcta para ARM64
-FROM --platform=$BUILDPLATFORM node:18-alpine AS build
+FROM node:18-alpine AS build
 
 # Establecer el directorio de trabajo
 WORKDIR /app
@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Etapa 2: Servir con NGINX
-FROM --platform=$BUILDPLATFORM nginx:alpine
+FROM nginx:alpine
 
 # Copiar archivos de la compilación al directorio NGINX
 COPY --from=build /app/dist /usr/share/nginx/html

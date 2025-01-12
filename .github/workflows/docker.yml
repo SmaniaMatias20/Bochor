@@ -27,7 +27,7 @@ jobs:
           docker buildx build \
             --platform linux/amd64,linux/arm64,linux/arm/v7 \
             --push \
-            -t ${{ secrets.DOCKER_USERNAME }}/bochor-backend:latest \
+            -t ${{ secrets.DOCKER_USERNAME }}/bochor-back:latest \
             -f ./Back/Dockerfile ./Back
 
       - name: Build and push frontend image (multi-architecture)
@@ -35,5 +35,5 @@ jobs:
           docker buildx build \
             --platform linux/amd64,linux/arm64,linux/arm/v7 \
             --push \
-            -t ${{ secrets.DOCKER_USERNAME }}/bochor-frontend:latest \
+            -t ${{ secrets.DOCKER_USERNAME }}/bochor-front:latest \
             -f ./Front/Dockerfile ./Front

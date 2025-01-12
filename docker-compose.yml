@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   backend:
-    image: mesvirtual/bochor-backend:latest
+    image: mesvirtual/bochor-back:latest
     build:
       context: ./Back
       dockerfile: Dockerfile
@@ -13,7 +13,7 @@ services:
     restart: always
 
   frontend:
-    image: mesvirtual/bochor-frontend:latest
+    image: mesvirtual/bochor-front:latest
     build:
       context: ./Front
       dockerfile: Dockerfile

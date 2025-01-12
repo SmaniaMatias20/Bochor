@@ -1,5 +1,5 @@
-# Usar una imagen base de Node.js
-FROM node:18-alpine AS build
+# Usar una imagen base de Node.js con soporte para multi-arquitectura
+FROM --platform=$BUILDPLATFORM node:18-alpine AS build
 
 # Establecer el directorio de trabajo
 WORKDIR /app

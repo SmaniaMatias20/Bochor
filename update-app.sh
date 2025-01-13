@@ -6,7 +6,7 @@ FRONT_IMAGE="mesvirtual/bochor-front:latest"
 
 # Iniciar sesión en Docker Hub (si es necesario, puedes agregar tus credenciales aquí)
 echo "Iniciando sesión en Docker Hub..."
-docker login -u "tu_usuario" -p "tu_contraseña"
+docker login -u "mesvirtual" -p "mes04022018"
 
 # Hacer el Pull de las imágenes más recientes
 echo "Haciendo pull de las imágenes..."
